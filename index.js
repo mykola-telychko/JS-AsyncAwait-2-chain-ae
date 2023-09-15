@@ -13,7 +13,7 @@ function fetchData() {
 function processAndTransformData(data) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const transformedData = data.toUpperCase();
+      const transformedData = data.toUpperCase().replaceAll(" ", "-");
       resolve(transformedData);
     }, 2000);
   });
